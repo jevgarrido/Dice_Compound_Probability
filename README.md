@@ -1,14 +1,14 @@
 # Compound Probability of Dice Roll
 
-Problem
+Problem:
     Find the (discrete) Probability Density Function associated with multiple dice roll
 
-Inputs
+Inputs:
     Number of dice, n;
     Number of faces in each die, f.
   
-Output
+Output:
     Plot of the normalized histogram associated with the roll.
   
-Language
+Language:
     MATLAB
