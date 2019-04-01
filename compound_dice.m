@@ -17,9 +17,10 @@ function [] = compound_dice(TPO)
     
     % Use recursion if the TPO (now variable DATA.table) is still incomplete.
     % There is no recursion if there are 2 dice or less. Then, recursion
-    % hapens once for each extra dice.
+    % hapens once for each extra die.
     if numel(DATA.table) < DATA.f^DATA.n
         compound_dice(DATA.table);
         return
     end
+    
 end
