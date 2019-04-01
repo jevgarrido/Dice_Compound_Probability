@@ -12,8 +12,6 @@ function [] = dice_probability_main(n, f)
     
     % Compute the Table of Possible Outcomes - TPO (variable DATA.table)
     compound_dice(DATA.std_die);
-    % The function compound_dice uses recursion,
-    % it's first input is the standard die (variable DATA.std_die)
     
     % Plot the Probability Density Function
     plot_pdf;
