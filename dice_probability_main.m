@@ -15,4 +15,5 @@ function [] = dice_probability_main(n, f)
     
     % Plot the Probability Density Function
     plot_pdf;
+    
 end
