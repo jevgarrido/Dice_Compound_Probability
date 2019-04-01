@@ -4,4 +4,5 @@ function [] = plot_pdf()
     figure(1)
     histogram(DATA.table, 'normalization', 'pdf')
     grid on
+    
 end
