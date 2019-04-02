@@ -12,3 +12,5 @@ Output:
   
 Language:
     MATLAB
+
+To run the solver just call the function "dice_probability_main(n, f)", setting the desired arguments n and f.
