@@ -1,4 +1,4 @@
-function Table = compound_dice(TPO, n, f, StandardDie)
+function Table = compound_dice( TPO, n, f, StandardDie )
     %% Just one die
     % The TPO is the standard die (first input) if there is just one die.
     if n == 1
@@ -20,4 +20,5 @@ function Table = compound_dice(TPO, n, f, StandardDie)
         Table = compound_dice(Table, n, f, StandardDie);
         return
     end
+    
 end
