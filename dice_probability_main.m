@@ -1,19 +1,17 @@
-function [] = dice_probability_main(n, f)
+function dice_probability_main(n, f)
     % This function plots the discrete PDF associated
     % with the rolling of n dice with f faces each.
-    
-    % Define the Problem
-    global DATA
-    DATA.n          = n;     % Number of dice
-    DATA.f          = f;     % Number of faces in each die
+    %
+    %  n     % Number of dice
+    %  f     % Number of faces on each die
     
     % Define the standard die
-    DATA.std_die    = linspace(1, DATA.f, DATA.f);
+    StandardDie     = linspace(1, f, f);
     
-    % Compute the Table of Possible Outcomes - TPO (variable DATA.table)
-    compound_dice(DATA.std_die);
+    % Compute the Table of Possible Outcomes - TPO
+    Table   = compound_dice(StandardDie, n, f, StandardDie);
     
     % Plot the Probability Density Function
-    plot_pdf;
+    plot_pdf(Table);
     
 end

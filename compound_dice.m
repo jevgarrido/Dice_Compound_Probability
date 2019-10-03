@@ -1,26 +1,23 @@
-function [] = compound_dice(TPO)
-    global DATA
-    
+function Table = compound_dice(TPO, n, f, StandardDie)
     %% Just one die
     % The TPO is the standard die (first input) if there is just one die.
-    if DATA.n == 1
-        DATA.table = TPO;
+    if n == 1
+        Table = TPO;
         return
     end
     
-    %% More than one die
+    %% Multiple dice
     % Reshape the TPO into a column vector
-    TPO = reshape(TPO, [], 1);      d = length(TPO);
+    TPO = reshape(TPO, [], 1);
+    d   = length(TPO);
     
-    % Compound the current TPO with one more die (variable DATA.std_die)
-    DATA.table = repmat(TPO, 1, DATA.f) + repmat(DATA.std_die, d, 1);
+    % Compound the current TPO with one more die
+    Table = repmat(TPO, 1, f) + repmat(StandardDie, d, 1);
     
-    % Use recursion if the TPO (now variable DATA.table) is still incomplete.
-    % There is no recursion if there are 2 dice or less. Then, recursion
-    % hapens once for each extra die.
-    if numel(DATA.table) < DATA.f^DATA.n
-        compound_dice(DATA.table);
+    % Use recursion if the TPO is still incomplete.
+    % Recursion hapens once for each extra die.
+    if numel(Table) < f^n
+        Table = compound_dice(Table, n, f, StandardDie);
         return
     end
-    
 end
