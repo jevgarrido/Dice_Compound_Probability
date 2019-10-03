@@ -13,6 +13,6 @@ Output:
 The function is called as "dice_probability_main(n, f)", introducing the desired arguments n and f.
 
 
-## Example for n = 4 and f = 6
+### Example for n = 4 and f = 6
 
 ![alt text]( /Images/4_6_sided_dice.png )
