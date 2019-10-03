@@ -1,7 +1,7 @@
 # Compound Probability of Dice Roll
 
 Problem:
-    Find the (discrete) Probability Density Function associated with multiple dice roll
+    Find the Discrete Probability Density Function associated with multiple dice roll
 
 Inputs:
     Number of dice, n;
@@ -9,10 +9,10 @@ Inputs:
   
 Output:
     Plot of the normalized histogram associated with the roll.
-  
-Language:
-    MATLAB
 
-To run the solver just call the function "dice_probability_main(n, f)", setting the desired arguments n and f.
+The function is called as "dice_probability_main(n, f)", introducing the desired arguments n and f.
+
+
+## Example for n = 4 and f = 6
 
 ![alt text]( /Images/4_6_sided_dice.png )
