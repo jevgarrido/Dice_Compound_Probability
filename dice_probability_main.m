@@ -12,6 +12,6 @@ function dice_probability_main(n, f)
     Table   = compound_dice(StandardDie, n, f, StandardDie);
     
     % Plot the Probability Density Function
-    plot_pdf(Table);
+    plot_pdf(Table, n, f);
     
 end
